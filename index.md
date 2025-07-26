@@ -5,7 +5,7 @@ order: 3
 ---
 <h2 style="text-align:center;">Purveyor of Ideas...</h2>
 
-<img src="/images/pic1.png" align=centre style="width:324px;height:297px;margin-top:10px;margin-right:30px"/>
+<img src="/images/pic1.png" align=center />
 
 
 <br>
