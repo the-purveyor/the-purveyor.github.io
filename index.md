@@ -8,9 +8,9 @@ order: 3
 <img src="/images/pic1.png" style="display:block; margin:auto;" width="500" />
 
 
-<p align="center">
+<!-- <p align="center">
   <b>Quick Links:</b><br>
   <a href="http://non-singularity.github.io/Blog">Blog</a> |
   <a href="http://non-singularity.github.io/Research">Research</a>
   <br><br>
-</p>
+</p> -->
