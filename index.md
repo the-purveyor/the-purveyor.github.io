@@ -24,9 +24,6 @@ I am simply a purveyor of ideas...
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 
 <p align="center">
   <b>Quick Links:</b><br>
