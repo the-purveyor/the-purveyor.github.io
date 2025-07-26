@@ -1,8 +1,8 @@
 # basic options
 title: Non-Singularity
-author:
-  name: Purveyor-of-Ideas...
-  email: atmagyaananubhavam@gmail.com
+# author:
+#   name: Purveyor-of-Ideas...
+#   email: atmagyaananubhavam@gmail.com
 
 # Build settings
 markdown: kramdown
