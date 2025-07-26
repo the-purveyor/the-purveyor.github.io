@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-order: 1
+order: 3
 ---
 <h2 style="text-align:center;">Welcome to my website! </h2>
 
