@@ -17,10 +17,10 @@ There are a few key points to note:
 Let's get going!
 
 -----------------------------
-
+<!-- 
 <p align="center">
   <b>Quick Links:</b><br>
   <a href="http://non-singularity.github.io/Blog">Blog</a> |
   <a href="http://non-singularity.github.io/Research">Research</a>
   <br><br>
-</p>
+</p> -->
