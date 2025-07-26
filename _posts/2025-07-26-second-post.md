@@ -21,4 +21,4 @@ This is the second paragraph.
 
 We want to embed the following image here
 
-<img src="/images/erl.jpg" align=center style="display:block; margin:auto;" width="500" />
+<img src="/images/erl.jpg" style="display:block; margin:auto;" width="500" />
