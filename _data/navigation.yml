@@ -3,13 +3,23 @@
 main:
   - title: "Blog"
     url: /Blog/
-    order: 1
   - title: "Research"
     url: /Research/
-    order: 2
   - title: "Home"
     url: /
-    order: 3
+# The order of the links in the header can be controlled by the `order` field.
+# If you want to change the order, add the `order` field to each item.
+# For example:
+# main:
+#   - title: "Blog"
+#     url: /Blog/
+#     order: 1
+#   - title: "Research"
+#     url: /Research/
+#     order: 2
+#   - title: "Home"
+#     url: /
+#     order: 3
 
 
   

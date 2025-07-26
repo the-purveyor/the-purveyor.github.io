@@ -16,6 +16,7 @@ There are a few key points to note:
 
 Let's get going!
 
+-----------------------------
 
 <p align="center">
   <b>Quick Links:</b><br>
