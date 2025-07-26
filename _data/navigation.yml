@@ -1,15 +1,15 @@
 # Belongs at: /_data/navigation.yml
 
 main:
-  - title: "Home"
-    url: /
-    order: 3
-  - title: "Research"
-    url: /Research/
-    order: 2
   - title: "Blog"
     url: /Blog/
     order: 1
+  - title: "Research"
+    url: /Research/
+    order: 2
+  - title: "Home"
+    url: /
+    order: 3
 
 
   
