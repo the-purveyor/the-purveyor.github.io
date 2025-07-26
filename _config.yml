@@ -1,0 +1,11 @@
+# basic options
+title: Anubhab Pattanayak
+author:
+  name: Anubhab Pattanayak
+  email: anubhab@mse.ac.in
+
+# Build settings
+markdown: kramdown
+remote_theme: jekyll/minima
+#show_excerpts: true # set to true to show excerpts on the homepage
+#excerpt_separator: <!--more-->
