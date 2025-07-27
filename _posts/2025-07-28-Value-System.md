@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Value System, Family and Mental Health in India
+title: First Post
 feature-img: "/images/pic1.png"
 tags:
   - Mental health
