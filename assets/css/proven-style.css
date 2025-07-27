@@ -399,48 +399,56 @@ table td {
 /* Site header */
 
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  background-color: #fdfdfd;
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 27.975px;
+    line-height: 60.75px;
+    position: relative;
 }
 
 .site-title {
-  font-size: 1.625rem;
-  font-variant: small-caps;
-  font-weight: 300;
-  margin: 0;
-  color: #424242;
+    font-size: 1.625rem;
+    font-variant: small-caps;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    float: left;
+    color: #424242;
 }
 
-.site-title a {
-  color: inherit;
-  text-decoration: none;
+.site-title:hover {
+    color: #2a7ae2;
 }
 
-.site-title a:hover {
-  color: #2a7ae2;
+@media screen and (max-width: 600px) {
+    .site-title {
+        padding-right: 45px;
+    }
 }
 
 /* Navigation */
 
 .site-nav {
-  display: flex;
-  gap: 20px;
+    position: absolute;
+    top: 9px;
+    right: 7.5px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: right;
 }
 
-.site-nav a {
-  color: #111;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
+.site-nav .nav-trigger,
+.site-nav .menu-icon {
+    display: none;
 }
 
-.site-nav a:hover {
-  background-color: #e8e8e8;
+.site-nav .page-link {
+    color: #111;
+    line-height: 1.5;
+    display: block;
+    padding: 5px 10px;
+    margin-left: 20px;
 }
 
 @media screen and (min-width: 600px) {
@@ -525,15 +533,6 @@ table td {
     .footer-col:last-child {
         padding-right: 0;
     }
-}
-
-/* Remove mobile nav styles completely */
-.site-nav .nav-trigger,
-.site-nav label,
-.site-nav .menu-icon,
-.site-nav input,
-.site-nav .trigger {
-  display: none !important;
 }
 
 /* Page content */
