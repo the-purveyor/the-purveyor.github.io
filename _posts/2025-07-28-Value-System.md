@@ -7,7 +7,7 @@ tags:
   - India
 ---
 
-> The key is for parents to realize that life is to be lived, not least by leaving a pressured one! 
+The key is for parents to realize that life is to be lived, not least by leaving a pressured one! 
 
 ![The Purveyor](/images/pic1.png)
 
