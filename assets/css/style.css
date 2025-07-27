@@ -371,7 +371,7 @@ table td {
 
   .site-nav label[for="nav-trigger"],
   .site-nav .menu-icon {
-    display: none;
+    display: block !important;
   }
 
   .site-nav input ~ .trigger {
