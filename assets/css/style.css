@@ -327,11 +327,11 @@ pre > code {
 
 /* Wrapper */
 
-/* .wrapper {
+.wrapper {
     max-width: calc(960px - (15px * 2));
     margin: 0 auto;
     padding: 0 15px;
-} */
+}
 
 .wrapper:after {
     content: "";
@@ -408,40 +408,40 @@ table td {
   background-color: #fdfdfd;
 }
 
-/* .site-title {
+.site-title {
   font-size: 1.625rem;
   font-variant: small-caps;
   font-weight: 300;
   margin: 0;
   color: #424242;
-} */
+}
 
-/* .site-title a {
+.site-title a {
   color: inherit;
   text-decoration: none;
-} */
+}
 
-/* .site-title a:hover {
+.site-title a:hover {
   color: #2a7ae2;
 }
- */
+
 /* Navigation */
 
-/* .site-nav {
+.site-nav {
   display: flex;
   gap: 20px;
-} */
+}
 
-/* .site-nav a {
+.site-nav a {
   color: #111;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 3px;
-} */
+}
 
-/* .site-nav a:hover {
+.site-nav a:hover {
   background-color: #e8e8e8;
-} */
+}
 
 @media screen and (min-width: 600px) {
     .site-nav {
@@ -644,46 +644,4 @@ table td {
     .one-half {
         width: calc(50% - (15px / 2));
     }
-}
-
-/* === Layout Fix for Header === */
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-}
-
-.site-title {
-  margin: 0;
-  padding: 0;
-  font-size: 1.8em;
-  text-align: left;
-  flex: 1;
-}
-
-.site-nav {
-  flex: 1;
-  text-align: right;
-}
-
-.site-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  gap: 1.5em;
-  vertical-align: middle;
-  align-items: center;
-}
-
-.site-nav li {
-  display: inline;
-}
-
-.site-nav a {
-  text-decoration: none;
-  padding: 0.25em 0;
-  line-height: 1.8em;
-  font-weight: 500;
 }
