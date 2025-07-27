@@ -7,6 +7,7 @@ tags:
   - India
 ---
 
->The key is for parents to realize that life is to be lived, not least by leaving a pressured one!
+## Introduction
+The key is for parents to realize that life is to be lived, not least by leaving a pressured one!
 
 Life is mysterious. Nobody understands 'creation', let alone 'The creation'. We are nurtured by creation. Our protection is nurtured through patience, resilience, nourishment, continuous and slow manifestation and care.
