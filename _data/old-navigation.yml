@@ -1,0 +1,32 @@
+# Belongs at: /_data/navigation.yml
+
+main:
+  - title: "Blog"
+    url: /Blog/
+  - title: "Research"
+    url: /Research/
+  - title: "Home"
+    url: /
+# The order of the links in the header can be controlled by the `order` field.
+# If you want to change the order, add the `order` field to each item.
+# For example:
+# main:
+#   - title: "Blog"
+#     url: /Blog/
+#     order: 1
+#   - title: "Research"
+#     url: /Research/
+#     order: 2
+#   - title: "Home"
+#     url: /
+#     order: 3
+
+
+  
+# If you want to link only specific pages in your header, add the path to the
+# pages in order as they should show up.
+#main:
+#  - title: "Research"
+#    url: /research/
+#  - title: "Archives"
+#    url: /archives/
