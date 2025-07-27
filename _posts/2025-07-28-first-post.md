@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post
+title:
 feature-img: "/images/pic1.png"
 tags:
   - Mental health

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: indian society mental health
+title:
 feature-img: "/images/pic1.png"
 tags:
   - Mental health
