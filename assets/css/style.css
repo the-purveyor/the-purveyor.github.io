@@ -369,7 +369,7 @@ table td {
     background-color: inherit;
   }
 
-  .site-nav label[for="nav-trigger"],
+/*   .site-nav label[for="nav-trigger"],
   .site-nav .menu-icon {
     display: block !important;
   }
@@ -377,7 +377,7 @@ table td {
   .site-nav input ~ .trigger {
     display: block;
   }
-
+ */
   .site-nav .page-link {
     display: inline;
     padding: 0;
