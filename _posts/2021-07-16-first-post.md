@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post
+title: First post1
 feature-img: "/images/pic1.png"
 tags:
   - test
