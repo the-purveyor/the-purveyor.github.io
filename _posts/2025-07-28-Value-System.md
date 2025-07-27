@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Post
+title: Value System
 feature-img: "/images/pic1.png"
 tags:
   - Mental health
