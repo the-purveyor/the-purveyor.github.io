@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thirdpost1
+title: Value system and mental health problem in Indiad
 feature-img: "/images/pic1.png"
 tags:
   - test
