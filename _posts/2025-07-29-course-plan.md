@@ -3,8 +3,7 @@ layout: post
 title: Lecture plan for EM29201
 ---
 
-📘
-Detailed Week-wise Course Plan
+## 📘 Detailed Week-wise Course Plan
 
 ----------------------------- 
 
