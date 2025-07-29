@@ -3,32 +3,6 @@ layout: post
 title: Lecture plan for EM29201
 ---
 
-## Lecture plan
-
-Intro
--	Nobody understands the ‘creation’; 
--	We are nurtured by this creation; closest physical being to creation is mother, Earth
--	Protection is ensured through patience, resilience, nourishment, continuous and slow manifestation and care
--	Aim to design a society where clearly defined responsibilities are gender-based, only to ensure our survival,
--	Children of Men, 
-
-
----
-layout: post
-title:
-feature-img: "/images/pic1.png"
-tags:
-  - Mental health
-  - India
----
-
-The key is for parents to realize that life is to be lived, not least by leaving a pressured one! 
-
-![The Purveyor]("/images/pic1.png")
-
-Life is mysterious. Nobody understands 'creation', let alone 'The creation'. We are nurtured by creation. Our protection is nurtured through patience, resilience, nourishment, continuous and slow manifestation and care.
-
- 
 📘
 Detailed Week-wise Course Plan
 ----------------------------- 
