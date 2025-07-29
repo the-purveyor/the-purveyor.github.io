@@ -7,7 +7,7 @@ title: Lecture plan for EM29201
 
 ----------------------------- 
 
-Week 1: Introduction to Economic Data & Software Tools
+✅ Week 1: Introduction to Economic Data & Software Tools
 -	Topics: Types of economic data, introduction to MS Excel, Stata, R, Python (overview).
 -	Datasets: GDP, Inflation, Employment (World Bank, IMF, RBI)
 -	Methods: Data types, file formats, variable types
@@ -15,7 +15,7 @@ Week 1: Introduction to Economic Data & Software Tools
 
 ----------------------------- 
 
-Week 2: Descriptive Statistics and Data Visualization
+✅ Week 2: Descriptive Statistics and Data Visualization
 -	Topics: Central tendency, dispersion, charts
 -	Datasets: NSSO Employment Survey, India Census, World Bank data
 -	Methods: Mean, median, mode, SD, boxplots, histograms, pie/bar charts
@@ -23,7 +23,7 @@ Week 2: Descriptive Statistics and Data Visualization
 
 ----------------------------- 
 
-Week 3: Data Cleaning and Management
+✅ Week 3: Data Cleaning and Management
 -	Topics: Handling missing values, outliers, recoding variables
 -	Datasets: PLFS or NFHS microdata
 -	Methods: Conditional replacement, outlier detection, reshape, merge
@@ -31,7 +31,7 @@ Week 3: Data Cleaning and Management
 
 ----------------------------- 
 
-Week 4: Index Numbers and Inflation Analysis
+✅ Week 4: Index Numbers and Inflation Analysis
 -	Topics: Construction of CPI, WPI, price indices
 -	Datasets: MOSPI CPI data, RBI WPI series
 -	Methods: Laspeyres, Paasche, base year rebasing
@@ -39,7 +39,7 @@ Week 4: Index Numbers and Inflation Analysis
 
 ----------------------------- 
 
-Week 5: Time Series Data: Trend Analysis
+✅ Week 5: Time Series Data: Trend Analysis
 -	Topics: Introduction to time series, trend decomposition, seasonality
 -	Datasets: Monthly inflation, GDP growth, Unemployment (ILO/RBI/NSO)
 -	Methods: Trend plotting, moving averages, seasonal decomposition
@@ -47,7 +47,7 @@ Week 5: Time Series Data: Trend Analysis
 
 ----------------------------- 
 
-Week 6: Regression Analysis – Basics
+✅ Week 6: Regression Analysis – Basics
 -	Topics: Simple and multiple linear regression
 -	Datasets: Simulated wage-education dataset, NSSO wage dataset
 -	Methods: OLS, interpretation of coefficients, goodness-of-fit
@@ -55,7 +55,7 @@ Week 6: Regression Analysis – Basics
 
 ----------------------------- 
 
-Week 7: Regression – Model Building & Interpretation
+✅ Week 7: Regression – Model Building & Interpretation
 -	Topics: Dummy variables, interaction terms, multicollinearity
 -	Datasets: Wage, education, gender, experience (constructed/simulated)
 -	Methods: Hypothesis testing, t-tests, VIF, adjusted R²
@@ -63,7 +63,7 @@ Week 7: Regression – Model Building & Interpretation
 
 ----------------------------- 
 
-Week 8: Working with Large Datasets and Public Portals
+✅ Week 8: Working with Large Datasets and Public Portals
 -	Topics: Importing data, scraping, APIs
 -	Datasets: India Data Portal, World Bank, FRED API
 -	Methods: readxl, readr, API calls, metadata handling
@@ -71,7 +71,7 @@ Week 8: Working with Large Datasets and Public Portals
 
 ----------------------------- 
 
-Week 9: Introduction to Impact Evaluation
+✅ Week 9: Introduction to Impact Evaluation
 -	Topics: Introduction to causal inference, Difference-in-Difference
 -	Datasets: Before-after policy dataset (subsidy/intervention)
 -	Methods: DID, Parallel trend assumption
@@ -79,7 +79,7 @@ Week 9: Introduction to Impact Evaluation
 
 -----------------------------
 
-Week 10: Survey Data and Sampling Design
+✅ Week 10: Survey Data and Sampling Design
 -	Topics: Sample design, weighting, survey estimation
 -	Datasets: NFHS, NSSO (sample file)
 -	Methods: Weighting, strata, clusters, design effects
@@ -87,7 +87,7 @@ Week 10: Survey Data and Sampling Design
 
 ----------------------------- 
 
-Week 11: Forecasting & Policy Simulation
+✅ Week 11: Forecasting & Policy Simulation
 -	Topics: Time-series forecasting, policy shocks
 -	Datasets: GDP/Inflation/Unemployment monthly series
 -	Methods: ARIMA, simple simulations, counterfactuals
@@ -95,7 +95,7 @@ Week 11: Forecasting & Policy Simulation
 
 ----------------------------- 
 
-Week 12: Final Case Study / Project Presentation
+✅ Week 12: Final Case Study / Project Presentation
 -	Topics: Students pick a real-world economic question and work in groups
 -	Datasets: Open-choice from curated sources
 -	Methods: All methods learned; build from problem to results
