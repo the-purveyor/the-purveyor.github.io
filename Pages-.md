@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Pages
+title: Pages |
 order: 1
 ---
 
