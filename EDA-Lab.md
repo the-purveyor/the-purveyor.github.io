@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EDA Lab
+title: EDA Lab |
 order: 2
 ---
 
