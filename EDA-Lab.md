@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research plan
+title: EDA Lab
 order: 2
 ---
 
@@ -20,7 +20,7 @@ order: 2
 
 ✅ Week 2: Descriptive Statistics and Data Visualization
 -	Topics: Central tendency, dispersion, charts
--	Datasets: NSSO Employment Survey, India Census, World Bank data
+-	Datasets: World Bank data, RBI, NSSO Employment Survey, India Census 
 -	Methods: Mean, median, mode, SD, boxplots, histograms, pie/bar charts
 -	Software: Excel (Descriptive), R (ggplot2), Stata (summarize, tabulate, graph)
 
