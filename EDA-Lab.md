@@ -10,7 +10,7 @@ order: 2
 
 ----------------------------- 
 
-✅ Week 1: Introduction to Economic Data & Software Tools
+✅ [Week 1: Introduction to Economic Data & Software Tools](https://non-singularity.github.io/2025/07/30/toc-week-one.html)
 -	Topics: Types of economic data, introduction to MS Excel, Stata, R, Python (overview).
 -	Datasets: GDP, Inflation, Employment (World Bank, IMF, RBI)
 -	Methods: Data types, file formats, variable types
