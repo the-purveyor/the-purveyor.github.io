@@ -3,7 +3,7 @@ layout: default
 title: Home
 order: 3
 ---
-<h2 style="text-align:center;">Purveyor-of-Ideas...</h2>
+<h2 style="text-align:center;">Economic Data Analysis</h2>
 
 <img src="/images/EDA.jpg" style="display:block; margin:auto;" width="600" />
 
