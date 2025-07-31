@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -7,166 +7,167 @@
   <meta name="author" content="30 July 2025" />
   <title>Economic Data Analysis Lab: Week 1</title>
   <style>
-html {
-color: #1a1a1a;
-background-color: #fdfdfd;
-}
-body {
-margin: 0 auto;
-max-width: 36em;
-padding-left: 50px;
-padding-right: 50px;
-padding-top: 50px;
-padding-bottom: 50px;
-hyphens: auto;
-overflow-wrap: break-word;
-text-rendering: optimizeLegibility;
-font-kerning: normal;
-}
-@media (max-width: 600px) {
-body {
-font-size: 0.9em;
-padding: 12px;
-}
-h1 {
-font-size: 1.8em;
-}
-}
-@media print {
-html {
-background-color: white;
-}
-body {
-background-color: transparent;
-color: black;
-font-size: 12pt;
-}
-p, h2, h3 {
-orphans: 3;
-widows: 3;
-}
-h2, h3, h4 {
-page-break-after: avoid;
-}
-}
-p {
-margin: 1em 0;
-}
-a {
-color: #1a1a1a;
-}
-a:visited {
-color: #1a1a1a;
-}
-img {
-max-width: 100%;
-}
-svg {
-height: auto;
-max-width: 100%;
-}
-h1, h2, h3, h4, h5, h6 {
-margin-top: 1.4em;
-}
-h5, h6 {
-font-size: 1em;
-font-style: italic;
-}
-h6 {
-font-weight: normal;
-}
-ol, ul {
-padding-left: 1.7em;
-margin-top: 1em;
-}
-li > ol, li > ul {
-margin-top: 0;
-}
-blockquote {
-margin: 1em 0 1em 1.7em;
-padding-left: 1em;
-border-left: 2px solid #e6e6e6;
-color: #606060;
-}
-code {
-font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-font-size: 85%;
-margin: 0;
-hyphens: manual;
-}
-pre {
-margin: 1em 0;
-overflow: auto;
-}
-pre code {
-padding: 0;
-overflow: visible;
-overflow-wrap: normal;
-}
-.sourceCode {
-background-color: transparent;
-overflow: visible;
-}
-hr {
-background-color: #1a1a1a;
-border: none;
-height: 1px;
-margin: 1em 0;
-}
-table {
-margin: 1em 0;
-border-collapse: collapse;
-width: 100%;
-overflow-x: auto;
-display: block;
-font-variant-numeric: lining-nums tabular-nums;
-}
-table caption {
-margin-bottom: 0.75em;
-}
-tbody {
-margin-top: 0.5em;
-border-top: 1px solid #1a1a1a;
-border-bottom: 1px solid #1a1a1a;
-}
-th {
-border-top: 1px solid #1a1a1a;
-padding: 0.25em 0.5em 0.25em 0.5em;
-}
-td {
-padding: 0.125em 0.5em 0.25em 0.5em;
-}
-header {
-margin-bottom: 4em;
-text-align: center;
-}
-#TOC li {
-list-style: none;
-}
-#TOC ul {
-padding-left: 1.3em;
-}
-#TOC > ul {
-padding-left: 0;
-}
-#TOC a:not(:hover) {
-text-decoration: none;
-}
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-font-size: inherit;
-width: 0.8em;
-margin: 0 0.8em 0.2em -1.6em;
-vertical-align: middle;
-}
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
-</style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 <style>
 /* CSS for Markstat 2.0 using Pandoc 2.0 */
 body{text-align: justify}
@@ -175,7 +176,7 @@ body, table {font-family: 'Georgia', Serif; font-size: 18px; color: #4b4b4b} /*#
 h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
 h1 {font-size: 200%;}
 h2 {font-size: 150%;}
-h3 {font-size: 120%;}
+h3 {font-size: 120%;color: green}
 h4 {font-size: 100%; font-weight:bold}
 img.center {display:block; margin-left:auto; margin-right:auto}
 .small{font-size:16pt;}
@@ -189,6 +190,13 @@ pre.stata {color:black;font-size:14.5px; line-height:18.5px;}
 pre {padding:8px; border:1px solid rgb(247, 247, 233) /*#c0c0c0*/; border-radius:8px; background-color:rgb(247, 247, 233);}
 code {color:#3366cc; background-color:#fafafa;}
 pre code {color:black /*#4b4b4b*/; background-color:rgb(247, 247, 233)}
+blockquote {
+  border-left: 4px solid #e57373;
+  background-color: #fdecea;
+  padding: 12px 16px;
+  margin: 1em 0;
+  border-radius: 6px;
+}
 /* Added for Pandoc */
 figure > img, div.figure > img {display:block; margin:auto}
 figcaption, p.caption {text-align:center; font-weight:bold; color:#3366cc;}
@@ -210,7 +218,8 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title"><a id="Go-to-Top"></a><a href="https://non-singularity.github.io/EDA-Lab.html">Economic Data
+<h1 class="title"><a id="Go-to-Top"></a><a
+href="https://non-singularity.github.io/EDA-Lab.html">Economic Data
 Analysis Lab: Week 1</a></h1>
 <p class="author">30 July 2025</p>
 <p class="date">Anubhab Pattanayak</p>
@@ -218,54 +227,38 @@ Analysis Lab: Week 1</a></h1>
 <h1 id="data-folder">Data Folder:</h1>
 <p>Click on the following drive link and download the folder into your
 PC’s Desktop.</p>
-<p><a href="https://drive.google.com/drive/folders/1AerLgvHn4BZj3rSzjLqxPQkAh9pYTfhS?usp=sharing">Google
+<p><a
+href="https://drive.google.com/drive/folders/1AerLgvHn4BZj3rSzjLqxPQkAh9pYTfhS?usp=sharing">Google
 Drive Link for Week1</a></p>
-<h1 id="week-1-objective">Week 1 objective</h1>
-<h2 id="stata">Stata</h2>
-<h3 id="importing-data"><a href="https://non-singularity.github.io/2025/07/30/week-one-import-describe.html">Importing
-Data</a></h3>
-<ul>
-<li><code>import</code></li>
-<li><code>describe</code></li>
-<li><code>describe, detail</code></li>
-<li><code>if</code> <code>in</code> qualifiers while importing and/or
-describing data</li>
-<li><code>list</code></li>
-<li><code>display</code></li>
-</ul>
-<h3 id="basic-data-management"><a href="https://non-singularity.github.io/week-one-data-management.html">Basic
+<h1 id="week-1-learning-objectives">✅ Week 1 Learning Objectives</h1>
+<h2 id="stata">💻 Stata</h2>
+<h3 id="import-data">📘<a
+href="https://non-singularity.github.io/2025/07/30/week-one-import-describe.html#importing-data">Import
+data</a></h3>
+<p><code>-- import; use; describe; describe, detail; if; in; list; display --</code></p>
+<h3 id="basic-data-management">📘<a
+href="https://non-singularity.github.io/week-one-data-management.html">Basic
 Data Management</a></h3>
-<ul>
-<li><code>sort</code></li>
-<li><code>generate</code> &amp; <code>replace</code></li>
-<li><code>drop</code></li>
-<li><code>keep</code></li>
-<li><code>label</code> variable &amp; values</li>
-<li><code>encode</code> &amp; <code>recode</code></li>
-</ul>
-<h3 id="basic-univariate-statistics"><a href="https://non-singularity.github.io/week-one-basic-univariate-stats.html">Basic
+<p><code>-- sort; generate; replace; drop; keep; label; encode; recode --</code></p>
+<h3 id="basic-univariate-statistics">📘<a
+href="https://non-singularity.github.io/week-one-basic-univariate-stats.html">Basic
 Univariate Statistics</a></h3>
-<ul>
-<li><code>summarize</code> &amp; <code>summarize, detail)</code></li>
-<li><code>tabulate</code></li>
-<li><code>tabulate, summarize</code></li>
-<li><code>tabstat</code></li>
-</ul>
-<h3 id="merging-appending-datasets"><a href="https://non-singularity.github.io/week-one-merge-data.html">Merging
+<p><code>-- summarize; summarize, detail; tabulate; tabulate, summarize; tabstat --</code></p>
+<h3 id="merging-appending-datasets">📘<a
+href="https://non-singularity.github.io/week-one-merge-data.html">Merging
 &amp; Appending datasets</a></h3>
-<ul>
-<li><code>merge</code> datasets</li>
-<li><code>append</code> datasets</li>
-</ul>
-<h3 id="univariate-graphs"><a href="https://non-singularity.github.io/week-one-univariate-plots.html">Univariate
+<p><code>-- merge; append --</code></p>
+<h3 id="univariate-graphs">📘<a
+href="https://non-singularity.github.io/week-one-univariate-plots.html">Univariate
 Graphs</a></h3>
 <ul>
-<li>Univariate plots: Bar chart</li>
-<li>Univariate distributional plots: <code>histogram</code>,
-<code>boxplot</code></li>
+<li>Univariate plots: Bar <code>--graph bar --</code></li>
+<li>Univariate distributional plots:
+<code>-- histogram; --boxplot--</code></li>
+<li>Two-way Graphs: <code>-- graph twoway --</code></li>
 </ul>
 <p><a href="https://non-singularity.github.io/EDA-Lab.html" class="back-button">
-<img role="img" aria-label="Back" src="/images/Undo-PNG-Picture1.png" alt="Back" width="40"> </a></p>
+<img src="/images/Undo-PNG-Picture1.png" alt="Back" width="40"> </a></p>
 <p align="right">
 <a href="#Go-to-Top" align="right">Go-to-Top</a> <br>
 </p>
