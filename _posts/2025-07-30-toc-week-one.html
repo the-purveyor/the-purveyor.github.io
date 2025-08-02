@@ -172,7 +172,7 @@
 /* CSS for Markstat 2.0 using Pandoc 2.0 */
 body{text-align: justify}
 body{padding:14px 28px; max-width:41em;/*background-color: #eeeeee*/;}
-body, table {font-family: 'Georgia', Serif; font-size: 18px; color: #4b4b4b} /*#4b4b4b*/
+body, table {font-family: 'Georgia', Serif; font-size: 17px; line-height:24px; color: #232323} /*#4b4b4b*/
 h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
 h1 {font-size: 200%;}
 h2 {font-size: 150%;}
@@ -185,8 +185,8 @@ a:visited {color:green; text-decoration: none;} /*#2a7ae2*/
 a:hover {color: #ff0000; text-decoration: none /*underline*/}
 a:active {color: #ff0000; none}
 .em {font-weight:bold;}
-pre, code {color:black; font-size:14.5px; line-height:18.5px; font-family: "Consolas", monospace;}
-pre.stata {color:black;font-size:14.5px; line-height:18.5px;}
+pre, code {color:black; font-size:14.5px; line-height:17px; font-family: "Consolas", monospace;}
+pre.stata {color:black;font-size:14.5px; line-height:17px;}
 pre {padding:8px; border:1px solid rgb(247, 247, 233) /*#c0c0c0*/; border-radius:8px; background-color:rgb(247, 247, 233);}
 code {color:#3366cc; background-color:#fafafa;}
 pre code {color:black /*#4b4b4b*/; background-color:rgb(247, 247, 233)}
@@ -196,6 +196,7 @@ blockquote {
   padding: 12px 16px;
   margin: 1em 0;
   border-radius: 6px;
+    color: black;
 }
 /* Added for Pandoc */
 figure > img, div.figure > img {display:block; margin:auto}
@@ -232,22 +233,21 @@ href="https://drive.google.com/drive/folders/1AerLgvHn4BZj3rSzjLqxPQkAh9pYTfhS?u
 Drive Link for Week1</a></p>
 <h1 id="week-1-learning-objectives">✅ Week 1 Learning Objectives</h1>
 <h2 id="stata">💻 Stata</h2>
-<h3 id="import-data">📘<a
-href="https://non-singularity.github.io/2025/07/30/week-one-import-describe.html#importing-data">Import
+<h3 id="import-and-describe-data">📘<a
+href="week-one-import-describe.html#import-data">Import and Describe
 data</a></h3>
-<p><code>-- import; use; describe; describe, detail; if; in; list; display --</code></p>
-<h3 id="basic-data-management">📘<a
-href="https://non-singularity.github.io/week-one-data-management.html">Basic
-Data Management</a></h3>
-<p><code>-- sort; generate; replace; drop; keep; label; encode; recode --</code></p>
-<h3 id="basic-univariate-statistics">📘<a
-href="https://non-singularity.github.io/week-one-basic-univariate-stats.html">Basic
-Univariate Statistics</a></h3>
-<p><code>-- summarize; summarize, detail; tabulate; tabulate, summarize; tabstat --</code></p>
+<p><code>-- import; use; describe; describe, detail; browse; list; if/in --</code></p>
 <h3 id="merging-appending-datasets">📘<a
-href="https://non-singularity.github.io/week-one-merge-data.html">Merging
-&amp; Appending datasets</a></h3>
+href="week-one-merge-append-data.html">Merging &amp; Appending
+datasets</a></h3>
 <p><code>-- merge; append --</code></p>
+<h3 id="basic-data-management">📘<a
+href="week-one-data-management.html">Basic Data Management</a></h3>
+<p><code>-- sort; drop; keep; generate; replace; label; encode; recode --</code></p>
+<h3 id="basic-univariate-statistics">📘<a
+href="week-one-basic-univariate-stats.html">Basic Univariate
+Statistics</a></h3>
+<p><code>-- summarize; summarize, detail; tabulate; tabulate, summarize; tabstat --</code></p>
 <h3 id="univariate-graphs">📘<a
 href="https://non-singularity.github.io/week-one-univariate-plots.html">Univariate
 Graphs</a></h3>
@@ -265,7 +265,6 @@ Graphs</a></h3>
 <hr style="width:60%; margin:auto; border:0.25px solid #ccc;">
 <p align="center">
 <b><u>Quick Links:</u></b><br>
-<a href="https://non-singularity.github.io/Pages.html">Pages</a> |
 <a href="https://non-singularity.github.io/EDA-Lab.html">EDA Lab</a> |
 <a href="https://non-singularity.github.io/">Home</a>
 </p>
