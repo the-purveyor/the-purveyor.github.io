@@ -172,7 +172,7 @@
 /* CSS for Markstat 2.0 using Pandoc 2.0 */
 body{text-align: justify}
 body{padding:14px 28px; max-width:41em;/*background-color: #eeeeee*/;}
-body, table {font-family: 'Georgia', Serif; font-size: 18px; color: #4b4b4b} /*#4b4b4b*/
+body, table {font-family: 'Georgia', Serif; font-size: 17px; line-height:24px; color: #232323} /*#4b4b4b*/
 h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
 h1 {font-size: 200%;}
 h2 {font-size: 150%;}
@@ -196,6 +196,7 @@ blockquote {
   padding: 12px 16px;
   margin: 1em 0;
   border-radius: 6px;
+    color: black;
 }
 /* Added for Pandoc */
 figure > img, div.figure > img {display:block; margin:auto}
@@ -232,7 +233,6 @@ Data Analysis Lab: Week 1</a></h1>
 <p>Start by setting the working directory. The directory is where all of
 your work will be stored, including new files to be created.</p>
 <pre><code>* Replace the following text in double-quote with the path to your working folder
-
 cd &quot;C:/Users/anubh/Desktop/EDA-Lab25/W1/&quot;</code></pre>
 
 <h2 id="import-data">🔰 <a href="#learning-objectives">Import
@@ -241,45 +241,42 @@ Data</a></h2>
 <ul>
 <li>Import Excel (.xls or .xlsx), Text (.CSV or .txt) files</li>
 </ul>
-<p>To import the country-wise GDP data in constant prices into Stata
-memory, use the <code>import excel</code> command as shown below.</p>
+<p>Import the country-wise GDP data in constant prices into Stata
+memory:</p>
 <pre><code>* import WB Constant GDP data
-import excel using &quot;./Data/WDI/Constant_GDP/Constant_GDP.xlsx&quot;,            ///
+import excel                                                      ///
+    using &quot;./Data/WDI/Constant_GDP/Constant_GDP.xlsx&quot;,            ///
     sheet(&quot;Data&quot;) firstrow clear</code></pre>
 <ul>
 <li>Store the data in memory as a Stata-readable (<code>.dta</code>)
 datafile.</li>
 </ul>
-<p>To store the data in memory, use the <code>save</code> command as
+<p>Store the data in memory, use the <code>save</code> command as
 follows.</p>
 <pre><code>* save as Stata dataset (.dta)
 save &quot;./Stata/Constant_GDP.dta&quot;, replace</code></pre>
-<p>You have the option to specify the directory or folder where it
-should be saved. For example, <code>./Stata/</code> specifies that the
-<code>.dta</code> file is saved in the <code>Stata</code> folder.</p>
-<p>If you don’t specify the directory, the <code>.dta</code> file will
-be stored in the current working directory set above, i.e.,
-<code>"C:/Users/anubh/Desktop/EDA-Lab25/W1/"</code>.</p>
+<p><code>./Stata/</code> specifies that the <code>.dta</code> file is
+saved in the <code>Stata</code> folder.</p>
+<p>If no directory is specified, the <code>.dta</code> file will be
+stored in the current working directory.</p>
 
-<blockquote>
-<p>✍️ Import and save per-capita GDP in constant prices.<br> ✍️ Import
-and save Country-group dataset.</p>
-</blockquote>
-<p>Now, to clear all imported data in Stata memory, type:</p>
+<p>To clear all imported data in Stata memory, type:</p>
 <pre><code>clear</code></pre>
 
+<p><a id="pr-ex1"></a> &gt; <strong>Practice Exercise 1</strong>!<br> ✍️
+Import and save per-capita GDP in constant prices.<br> ✍️ Import and
+save Country-group dataset.</p>
 
 
 <h3 id="import-stata-data">🧩 Import Stata data</h3>
-<p>Import the already created Stata dataset <code>(.dta)</code> stored
-in <code>./Stata</code> folder via the <code>use</code> command as
-follows:</p>
+<p>Import Stata dataset <code>(.dta)</code> stored in
+<code>./Stata</code> folder:</p>
 <pre><code>use &quot;./Stata/Constant_GDP.dta&quot;</code></pre>
 
 <blockquote>
-<p>✍️ What do the following commands do? Examine each of the following
-commands, and identify the number of the command line(s), where you will
-encounter an error.<br> <br>
+<p><strong>Practice Exercise 2</strong>!<br> ✍️ Examine each of the
+following commands, and identify the number of the command line(s),
+where you will encounter an error.<br> <br>
 <code>1. use ".Stata/Constant_GDP.dta"</code><br>
 <code>2. use ".Stata/pc_Constant_GDP.dta"</code><br>
 <code>3. use ".Stata//pc_Constant_GDP.dta", clear</code><br>
@@ -288,86 +285,87 @@ encounter an error.<br> <br>
 <h2 id="describe-data">🔰 <a href="#learning-objectives">Describe
 data</a></h2>
 <h3 id="brief-info-on-dataset">🧩 Brief Info on Dataset</h3>
-<p>Use the <code>describe</code> command with the option
-<code>short</code> to know the dimensions of the dataset in memory,
-viz., # of variables and # of observations/records/rows/data points. The
-command and its output is shown below.</p>
-<pre class='stata'>. describe, short
+<p>To know the dimensions of the dataset in memory, viz., # of variables
+and # of observations/records/rows/data points type:</p>
+<pre class='stata'>. * Print dataset dimensions
+. describe, short
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  2 Aug 2025 01:37
+    Variables:             3                  2 Aug 2025 15:11
 Sorted by: 
 </pre>
 <h3 id="detailed-info-on-dataset">🧩 Detailed Info on Dataset</h3>
-<p>Typing <code>describe, detail</code> will give further details of
-your data, viz., Variable or column or feature name, storage type,
-display format, variable and value lables.</p>
-<pre class='stata'>. describe, detail
+<p>Further details of your data, viz., Variable or column or feature
+name, storage type, display format, variable and value lables can be
+know by:</p>
+<pre class='stata'>. * Print detailed data info
+. describe, detail
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  2 Aug 2025 01:37
+    Variables:             3                  2 Aug 2025 15:11
         Width:            41                  
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 CountryName     str30   %30s                  Country Name
 CountryCode     str3    %9s                   Country Code
 Constant_G~2022 double  %10.0g                Constant_GDP2022
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 Sorted by: 
 </pre>
-<p>One can describe a dataset (located remotely or locally), without
-actually importing into Stata memory, as can be seen from the following
-example. While <code>Constant_GDP.dta</code> dataset is loaded in
-memory, we can describe the dataset <code>states.dta</code> located in
-the Stata website.</p>
-<pre class='stata'>. describe using https://www.stata-press.com/data/r18/states
+<p>While <code>Constant_GDP.dta</code> dataset is loaded in memory,
+describe another dataset <code>states.dta</code> located in the Stata
+website.</p>
+<pre class='stata'>. * Describe remote dataset without loading into memory
+. describe using https://www.stata-press.com/data/r18/states
 
 Contains data                                 State data
  Observations:            50                  3 Jan 2022 15:17
     Variables:             5                  
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 state           str8    %9s                   
 region          int     %8.0g      reg        Census Region
 median_age      float   %9.0g                 Median Age
 marriage_rate   long    %12.0g                Marriages per 100,000
 divorce_rate    long    %12.0g                Divorces per 100,000
-──────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────
 Sorted by: region  
 </pre>
 <blockquote>
-<p>✍️ Import the following Stata datasets and examine them in
-detail.<br> 1. Constant GDP dataset<br> 2. per-capita Constant GDP
-dataset<br> 3. Country-group dataset</p>
+<p><strong>Practice Exercise 3</strong>!<br> ✍️ Import the following
+Stata datasets and examine them in detail. Identify any common variables
+in the two-datasets. <br> 1. per-capita Constant GDP dataset<br> 2.
+Country-group dataset</p>
 </blockquote>
 <h3 id="browsing-data">🧩 Browsing data</h3>
-<p>You can take a look at the dataset stored in Stata memory by simply
-typing the <code>browse</code> command.</p>
-<p>The entire dataset stored in memory will show-up as if inside a
-spreadsheet program like <em>MS Excel</em>.</p>
-<p>The following command will show only the data pertaining to the
-particular variable <code>CountryName</code>:</p>
-<pre><code>browse CountryName</code></pre>
+<p>Take a look at the dataset stored in Stata memory by typing
+<code>browse</code>. The entire dataset stored in memory will pop-up in
+a spreadsheet-like window.</p>
+<p>To see only the data pertaining to the particular variable
+<code>CountryName</code>:</p>
+<pre><code>* Browse data of CountryName variable
+browse CountryName</code></pre>
 <h3 id="listing-data">🧩 Listing data</h3>
-<p>If you want the data of a particular variable (feature) or all
-variables (all features) to be <em>printed</em> on the results window,
-use the <code>list</code> command as follows.</p>
-<pre><code>list CountryName</code></pre>
+<p>To <em>print</em> the data on the results window, use the
+<code>list</code> command.</p>
+<pre><code>* List data of CountryName variable
+list CountryName</code></pre>
 <p>The command simply prints the data for <code>CountryName</code> on
 your Stata results screen/window.</p>
 <h2 id="qualifiers">🔰 <a
 href="#learning-objectives">Qualifiers</a></h2>
 <p>The <code>in</code> qualifier specifies the rows/range of data
-records on which you want to get some information. E.g., if you want the
-names of the <em>first five</em> countries in your dataset to be printed
-on your Stata results window type:</p>
-<pre class='stata'>. list CountryName in 1/5        // 1 to 5 is written as 1/5
+records to examine. E.g., the names of the <em>first five</em> countries
+in your dataset can be printed on your Stata results window as
+follows:</p>
+<pre class='stata'>. * List name of first 5 countries
+. list CountryName in 1/5
 
      ┌────────────────┐
      │    CountryName │
@@ -379,11 +377,33 @@ on your Stata results window type:</p>
   5. │        Andorra │
      └────────────────┘
 </pre>
-<p>The rows or data points which meets certain specific condition can be
-listed using the <code>if</code> qualifier.</p>
-<p>E.g., suppose you want to list (priint) the names of the countries
-whose GDP is USD 10 trillion or more, you type:</p>
-<pre class='stata'>. list CountryName if                                     ///
+<p>The <code>if</code> qualifier specifies the condition pertaining to
+your data.</p>
+<p>E.g., to list the countries whose GDP for 2022 is missing, type:</p>
+<pre class='stata'>. * List country names whose 2022 GDP data is missing.
+. list CountryName if                                     ///
+>     Constant_GDP2022 == .
+
+     ┌───────────────────────────┐
+     │               CountryName │
+     ├───────────────────────────┤
+ 28. │    British Virgin Islands │
+ 62. │                   Eritrea │
+ 76. │                 Gibraltar │
+104. │ Korea, Dem. People's Rep. │
+115. │             Liechtenstein │
+     ├───────────────────────────┤
+141. │             New Caledonia │
+179. │               South Sudan │
+184. │  St. Martin (French part) │
+211. │             Venezuela, RB │
+215. │               Yemen, Rep. │
+     └───────────────────────────┘
+</pre>
+<p>To list the countries whose GDP is USD 10 trillion or more, you
+type:</p>
+<pre class='stata'>. * List country names whose GDP >= USD 10 trillion
+. list CountryName if                                     ///
 >     Constant_GDP2022 >= 10000000000000
 
      ┌───────────────────────────┐
@@ -405,20 +425,18 @@ whose GDP is USD 10 trillion or more, you type:</p>
 215. │               Yemen, Rep. │
      └───────────────────────────┘
 </pre>
-<p>You can see there are some unexpected names (e.g., Yemen or South
-Sudan) in this list.</p>
-<p>These unexpected names are countries that have “missing” GDP
-data.</p>
-<p>This is because Stata displays missing numeric data as a
-<code>"."</code> (dot) but it, Stata stores a very very (unreasonably)
-high value.</p>
-<p>As per Stata since <code>.</code> &gt; 10000000000000, the names of
-those countries with <code>"."</code> (missing) shows-up in the
-list.</p>
-<p>The right command then is to list those countries that have GDP of
-USD 10 trillion or more <em>and</em> DO NOT have missing GDP data. This
-is achieved through the following command:</p>
-<pre class='stata'>. list CountryName if                                     ///
+<p>Note that the names that appeared in the list of countries whose GDP
+data is “missing” are appearing in the list of countries whose GDP is
+USD 10 trillion or more. Why?</p>
+<p>This is missing numeric data displayed by a <code>"."</code> (dot) is
+stored as a very very (unreasonably) high value by Stata. Since Stata
+treats <code>.</code> &gt; 10000000000000, the names of those countries
+with <code>"."</code> (missing data) shows-up in the list of countries
+whose GDP is 10 trillion or more. The right approach is to list those
+countries that have GDP of USD 10 trillion or more AND <u>do not</u>
+have missing GDP data.</p>
+<pre class='stata'>. * List country names whose GDP >= USD 10 trillion &amp; GDP is non-missing.
+. list CountryName if                                     ///
 >     Constant_GDP2022 >= 10000000000000 &amp;                ///
 >     Constant_GDP2022 != .
 
@@ -430,9 +448,33 @@ is achieved through the following command:</p>
      └───────────────┘
 </pre>
 <blockquote>
-<p>✍️ Import the following Stata datasets and examine them in
-detail.<br> 1. Constant GDP dataset<br> 2. per-capita Constant GDP
-dataset<br> 3. Country-group dataset</p>
+<p><strong>Practice</strong>!<br> ✍️ Import the following Stata datasets
+and examine them in detail.<br> 1. Constant GDP dataset<br> 2.
+per-capita Constant GDP dataset<br> 3. Country-group dataset</p>
 </blockquote>
+<h3 id="count-of-observations-in-dataset">🧩 Count of observations in
+dataset</h3>
+<pre class='stata'>. * Count the total data points (_N) in dataset
+. count
+  217
+
+.     
+. * Count the total data points that meets following criteria
+. count if                                                 ///
+>     Constant_GDP2022 >= 10000000000000 &amp;                 ///
+>     Constant_GDP2022 != .
+  2
+</pre>
+<p><a href="https://non-singularity.github.io/EDA-Lab.html" class="back-button">
+<img src="/images/Undo-PNG-Picture1.png" alt="Back" width="40"> </a></p>
+<p align="right">
+<a href="#Go-to-Top" align="right">Go-to-Top</a> <br>
+</p>
+<hr style="width:60%; margin:auto; border:0.25px solid #ccc;">
+<p align="center">
+<b><u>Quick Links:</u></b><br>
+<a href="https://non-singularity.github.io/EDA-Lab.html">EDA Lab</a> |
+<a href="https://non-singularity.github.io/">Home</a>
+</p>
 </body>
 </html>
