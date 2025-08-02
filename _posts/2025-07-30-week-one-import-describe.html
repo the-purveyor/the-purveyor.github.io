@@ -185,8 +185,8 @@ a:visited {color:green; text-decoration: none;} /*#2a7ae2*/
 a:hover {color: #ff0000; text-decoration: none /*underline*/}
 a:active {color: #ff0000; none}
 .em {font-weight:bold;}
-pre, code {color:black; font-size:14.5px; line-height:18.5px; font-family: "Consolas", monospace;}
-pre.stata {color:black;font-size:14.5px; line-height:18.5px;}
+pre, code {color:black; font-size:14.5px; line-height:17px; font-family: "Consolas", monospace;}
+pre.stata {color:black;font-size:14.5px; line-height:17px;}
 pre {padding:8px; border:1px solid rgb(247, 247, 233) /*#c0c0c0*/; border-radius:8px; background-color:rgb(247, 247, 233);}
 code {color:#3366cc; background-color:#fafafa;}
 pre code {color:black /*#4b4b4b*/; background-color:rgb(247, 247, 233)}
@@ -227,11 +227,11 @@ Data Analysis Lab: Week 1</a></h1>
 <h2 id="learning-objectives">✅ Learning Objectives:</h2>
 <p><a href="#import-data">📖 Importing data</a></p>
 <p><a href="#describe-data">📖 Describing data</a></p>
+<p><a href="#listing-data">📖 Listing data and Display</a></p>
 <p><a href="#qualifiers">📖 Using Qualifiers</a></p>
 <p>Start by setting the working directory. The directory is where all of
 your work will be stored, including new files to be created.</p>
-<pre><code>* Replace the text in double-quote with 
-* the path to your working folder
+<pre><code>* Replace the following text in double-quote with the path to your working folder
 
 cd &quot;C:/Users/anubh/Desktop/EDA-Lab25/W1/&quot;</code></pre>
 
@@ -296,7 +296,7 @@ command and its output is shown below.</p>
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  1 Aug 2025 01:30
+    Variables:             3                  2 Aug 2025 01:37
 Sorted by: 
 </pre>
 <h3 id="detailed-info-on-dataset">🧩 Detailed Info on Dataset</h3>
@@ -307,36 +307,38 @@ display format, variable and value lables.</p>
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  1 Aug 2025 01:30
+    Variables:             3                  2 Aug 2025 01:37
         Width:            41                  
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 CountryName     str30   %30s                  Country Name
 CountryCode     str3    %9s                   Country Code
 Constant_G~2022 double  %10.0g                Constant_GDP2022
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 Sorted by: 
 </pre>
 <p>One can describe a dataset (located remotely or locally), without
 actually importing into Stata memory, as can be seen from the following
-example:</p>
+example. While <code>Constant_GDP.dta</code> dataset is loaded in
+memory, we can describe the dataset <code>states.dta</code> located in
+the Stata website.</p>
 <pre class='stata'>. describe using https://www.stata-press.com/data/r18/states
 
 Contains data                                 State data
  Observations:            50                  3 Jan 2022 15:17
     Variables:             5                  
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 state           str8    %9s                   
 region          int     %8.0g      reg        Census Region
 median_age      float   %9.0g                 Median Age
 marriage_rate   long    %12.0g                Marriages per 100,000
 divorce_rate    long    %12.0g                Divorces per 100,000
-───────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────
 Sorted by: region  
 </pre>
 <blockquote>
@@ -344,7 +346,93 @@ Sorted by: region
 detail.<br> 1. Constant GDP dataset<br> 2. per-capita Constant GDP
 dataset<br> 3. Country-group dataset</p>
 </blockquote>
+<h3 id="browsing-data">🧩 Browsing data</h3>
+<p>You can take a look at the dataset stored in Stata memory by simply
+typing the <code>browse</code> command.</p>
+<p>The entire dataset stored in memory will show-up as if inside a
+spreadsheet program like <em>MS Excel</em>.</p>
+<p>The following command will show only the data pertaining to the
+particular variable <code>CountryName</code>:</p>
+<pre><code>browse CountryName</code></pre>
+<h3 id="listing-data">🧩 Listing data</h3>
+<p>If you want the data of a particular variable (feature) or all
+variables (all features) to be <em>printed</em> on the results window,
+use the <code>list</code> command as follows.</p>
+<pre><code>list CountryName</code></pre>
+<p>The command simply prints the data for <code>CountryName</code> on
+your Stata results screen/window.</p>
 <h2 id="qualifiers">🔰 <a
 href="#learning-objectives">Qualifiers</a></h2>
+<p>The <code>in</code> qualifier specifies the rows/range of data
+records on which you want to get some information. E.g., if you want the
+names of the <em>first five</em> countries in your dataset to be printed
+on your Stata results window type:</p>
+<pre class='stata'>. list CountryName in 1/5        // 1 to 5 is written as 1/5
+
+     ┌────────────────┐
+     │    CountryName │
+     ├────────────────┤
+  1. │    Afghanistan │
+  2. │        Albania │
+  3. │        Algeria │
+  4. │ American Samoa │
+  5. │        Andorra │
+     └────────────────┘
+</pre>
+<p>The rows or data points which meets certain specific condition can be
+listed using the <code>if</code> qualifier.</p>
+<p>E.g., suppose you want to list (priint) the names of the countries
+whose GDP is USD 10 trillion or more, you type:</p>
+<pre class='stata'>. list CountryName if                                     ///
+>     Constant_GDP2022 >= 10000000000000
+
+     ┌───────────────────────────┐
+     │               CountryName │
+     ├───────────────────────────┤
+ 28. │    British Virgin Islands │
+ 42. │                     China │
+ 62. │                   Eritrea │
+ 76. │                 Gibraltar │
+104. │ Korea, Dem. People's Rep. │
+     ├───────────────────────────┤
+115. │             Liechtenstein │
+141. │             New Caledonia │
+179. │               South Sudan │
+184. │  St. Martin (French part) │
+207. │             United States │
+     ├───────────────────────────┤
+211. │             Venezuela, RB │
+215. │               Yemen, Rep. │
+     └───────────────────────────┘
+</pre>
+<p>You can see there are some unexpected names (e.g., Yemen or South
+Sudan) in this list.</p>
+<p>These unexpected names are countries that have “missing” GDP
+data.</p>
+<p>This is because Stata displays missing numeric data as a
+<code>"."</code> (dot) but it, Stata stores a very very (unreasonably)
+high value.</p>
+<p>As per Stata since <code>.</code> &gt; 10000000000000, the names of
+those countries with <code>"."</code> (missing) shows-up in the
+list.</p>
+<p>The right command then is to list those countries that have GDP of
+USD 10 trillion or more <em>and</em> DO NOT have missing GDP data. This
+is achieved through the following command:</p>
+<pre class='stata'>. list CountryName if                                     ///
+>     Constant_GDP2022 >= 10000000000000 &amp;                ///
+>     Constant_GDP2022 != .
+
+     ┌───────────────┐
+     │   CountryName │
+     ├───────────────┤
+ 42. │         China │
+207. │ United States │
+     └───────────────┘
+</pre>
+<blockquote>
+<p>✍️ Import the following Stata datasets and examine them in
+detail.<br> 1. Constant GDP dataset<br> 2. per-capita Constant GDP
+dataset<br> 3. Country-group dataset</p>
+</blockquote>
 </body>
 </html>
