@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Post1u
+title: 
 feature-img: "/images/EDA.jpg"
 tags:
   - test
