@@ -243,10 +243,13 @@ Data</a></h2>
 </ul>
 <p>Import the country-wise GDP data in constant prices into Stata
 memory:</p>
-<pre><code>* import WB Constant GDP data
+<pre><code>* clear Stata memory
+clear
+
+* import WB Constant GDP data
 import excel                                                      ///
     using &quot;./Data/WDI/Constant_GDP/Constant_GDP.xlsx&quot;,            ///
-    sheet(&quot;Data&quot;) firstrow clear</code></pre>
+    sheet(&quot;Data&quot;) firstrow</code></pre>
 <ul>
 <li>Store the data in memory as a Stata-readable (<code>.dta</code>)
 datafile.</li>
@@ -254,7 +257,7 @@ datafile.</li>
 <p>Store the data in memory, use the <code>save</code> command as
 follows.</p>
 <pre><code>* save as Stata dataset (.dta)
-save &quot;./Stata/Constant_GDP.dta&quot;, replace</code></pre>
+save &quot;./Stata/Constant_GDP.dta&quot;</code></pre>
 <p><code>./Stata/</code> specifies that the <code>.dta</code> file is
 saved in the <code>Stata</code> folder.</p>
 <p>If no directory is specified, the <code>.dta</code> file will be
@@ -265,9 +268,8 @@ stored in the current working directory.</p>
 
 <p><a id="pr-ex1"></a></p>
 <blockquote>
-<p><strong>Practice Exercise 1</strong>!<br> ✍️ Import and save
-per-capita GDP in constant prices.<br> ✍️ Import and save Country-group
-dataset.</p>
+<p><strong>✍️ Exercise 1</strong>!<br> 1. Import and save per-capita GDP
+in constant prices.<br> 2. Import and save Country-group dataset.</p>
 </blockquote>
 
 
@@ -277,9 +279,9 @@ dataset.</p>
 <pre><code>use &quot;./Stata/Constant_GDP.dta&quot;</code></pre>
 
 <blockquote>
-<p><strong>Practice Exercise 2</strong>!<br> ✍️ Examine each of the
-following commands, and identify the number of the command line(s),
-where you will encounter an error.<br> <br>
+<p><strong>✍️ Exercise 2</strong>!<br> Examine each of the following
+commands, and identify the number of the command line(s), where you will
+encounter an error.<br> <br>
 <code>1. use ".Stata/Constant_GDP.dta"</code><br>
 <code>2. use ".Stata/pc_Constant_GDP.dta"</code><br>
 <code>3. use ".Stata//pc_Constant_GDP.dta", clear</code><br>
@@ -295,7 +297,7 @@ and # of observations/records/rows/data points type:</p>
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  2 Aug 2025 15:33
+    Variables:             3                  6 Aug 2025 14:32
 Sorted by: 
 </pre>
 <h3 id="detailed-info-on-dataset">🧩 Detailed Info on Dataset</h3>
@@ -307,16 +309,16 @@ know by:</p>
 
 Contains data from ./Stata/Constant_GDP.dta
  Observations:           217                  
-    Variables:             3                  2 Aug 2025 15:33
+    Variables:             3                  6 Aug 2025 14:32
         Width:            41                  
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 CountryName     str30   %30s                  Country Name
 CountryCode     str3    %9s                   Country Code
 Constant_G~2022 double  %10.0g                Constant_GDP2022
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 Sorted by: 
 </pre>
 <p>While <code>Constant_GDP.dta</code> dataset is loaded in memory,
@@ -328,22 +330,22 @@ website.</p>
 Contains data                                 State data
  Observations:            50                  3 Jan 2022 15:17
     Variables:             5                  
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 state           str8    %9s                   
 region          int     %8.0g      reg        Census Region
 median_age      float   %9.0g                 Median Age
 marriage_rate   long    %12.0g                Marriages per 100,000
 divorce_rate    long    %12.0g                Divorces per 100,000
-─────────────────────────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────────────────
 Sorted by: region  
 </pre>
 <blockquote>
-<p><strong>Practice Exercise 3</strong>!<br> ✍️ Import the following
-Stata datasets and examine them in detail. Identify any common variables
-in the two-datasets. <br> 1. per-capita Constant GDP dataset<br> 2.
+<p><strong>✍️ Exercise 3</strong>!<br> Import the following Stata
+datasets and examine them in detail. Identify any common variables in
+the two-datasets. <br> 1. per-capita Constant GDP dataset<br> 2.
 Country-group dataset</p>
 </blockquote>
 <h3 id="browsing-data">🧩 Browsing data</h3>
@@ -450,11 +452,6 @@ have missing GDP data.</p>
 207. │ United States │
      └───────────────┘
 </pre>
-<blockquote>
-<p><strong>Practice</strong>!<br> ✍️ Import the following Stata datasets
-and examine them in detail.<br> 1. Constant GDP dataset<br> 2.
-per-capita Constant GDP dataset<br> 3. Country-group dataset</p>
-</blockquote>
 <h3 id="count-of-observations-in-dataset">🧩 Count of observations in
 dataset</h3>
 <pre class='stata'>. * Count the total data points (_N) in dataset
@@ -468,6 +465,12 @@ dataset</h3>
 >     Constant_GDP2022 != .
   2
 </pre>
+<blockquote>
+<p><strong>✍️ Exercise 4</strong>!<br> 1. List the names of last 5
+countries in the dataset.<br> 2. List the names countries that appear
+between row 11 and row 15 in the dataset.<br> 3. Find the number of
+countries which had Constant GDP for 2022 below USD 50 Billion.</p>
+</blockquote>
 <p><a href="https://non-singularity.github.io/EDA-Lab.html" class="back-button">
 <img src="/images/Undo-PNG-Picture1.png" alt="Back" width="40"> </a></p>
 <p align="right">

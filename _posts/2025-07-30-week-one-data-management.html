@@ -220,45 +220,78 @@ table:not([class]) tbody:last-child tr:last-child td {border-bottom:1px solid bl
 <body>
 <header id="title-block-header">
 <h1 class="title"><a id="Go-to-Top"></a><a
-href="https://non-singularity.github.io/EDA-Lab.html">Economic Data
-Analysis Lab: Week 1</a></h1>
+href="https://non-singularity.github.io/2025/07/30/toc-week-one.html">Economic
+Data Analysis Lab: Week 1</a></h1>
 <p class="author">30 July 2025</p>
 <p class="date">Anubhab Pattanayak</p>
 </header>
-<h1 id="data-folder">Data Folder:</h1>
-<p>Click on the following drive link and download the folder into your
-PC’s Desktop.</p>
-<p><a
-href="https://drive.google.com/drive/folders/1AerLgvHn4BZj3rSzjLqxPQkAh9pYTfhS?usp=sharing">Google
-Drive Link for Week1</a></p>
-<h1 id="week-1-learning-objectives">✅ Week 1 Learning Objectives</h1>
-<h2 id="stata">💻 Stata</h2>
-<h3 id="import-and-describe-data">📘<a
-href="week-one-import-describe.html#import-data">Import and Describe
-data</a></h3>
-<p><code>-- import; use; describe; describe, detail; browse; list; if/in --</code></p>
-<h3 id="merging-datasets">📘<a href="week-one-merge-data.html">Merging
-datasets</a></h3>
-<p><code>-- merge --</code></p>
-<h3 id="basic-data-management">📘<a
-href="week-one-data-management.html">Basic Data Management</a></h3>
-<p><code>-- sort; by, sort; drop; keep; generate; replace; label; encode; recode --</code></p>
-<h3 id="appending-datasets">📘<a
-href="week-one-append-data.html">Appending datasets</a></h3>
-<p><code>-- append --</code></p>
-<h3 id="basic-univariate-statistics">📘<a
-href="week-one-basic-univariate-stats.html">Basic Univariate
-Statistics</a></h3>
-<p><code>-- summarize; summarize, detail; tabulate; tabulate, summarize; tabstat --</code></p>
-<h3 id="univariate-graphs">📘<a
-href="https://non-singularity.github.io/week-one-univariate-plots.html">Univariate
-Graphs</a></h3>
-<ul>
-<li>Univariate plots: Bar <code>--graph bar --</code></li>
-<li>Univariate distributional plots:
-<code>-- histogram; --boxplot--</code></li>
-<li>Two-way Graphs: <code>-- graph twoway --</code></li>
-</ul>
+<h2 id="learning-objectives">✅ Learning Objectives:</h2>
+<p><a href="#sorting-data">📖 Sorting data</a></p>
+<p><a href="#variables-management">📖 Variables management</a></p>
+<p><a href="#Labels">📖 Labeling</a></p>
+<h2 id="sorting-data">🔰 <a href="#learning-objectives">Sorting
+data</a></h2>
+<h3 id="sort">🧩 sort</h3>
+<ol type="1">
+<li>Import the merged data</li>
+</ol>
+
+<pre><code>* Import the final merged data
+use &quot;./Stata/merged-data.dta&quot;</code></pre>
+<ol start="2" type="1">
+<li>Find the top 5 countries having highest per-capita (Constant) GDP
+for 2022.</li>
+</ol>
+<p>Use <code>sort</code> to sort the data.</p>
+
+<pre><code>* Sort the data as per pc_Constant_GDP2022pc_Constant_GDP2022
+sort pc_Constant_GDP2022</code></pre>
+<p>Data is sorted in <strong>ascending</strong> order. But we wanted it
+to be sorted in <strong>descending</strong> order. This can be achieved
+by:</p>
+
+<pre><code>* Sort in Descending order of pc_Constant_GDP2022
+gsort -pc_Constant_GDP2022</code></pre>
+<p>List the top 5 countries on your screen</p>
+
+<pre><code>* List top 5 countries
+list CountryName pc_Constant_GDP2022 in 1/5</code></pre>
+<ol start="2" type="1">
+<li>Find the top 5 countries having highest per-capita (Constant) GDP
+for 2022 within each WB Income Group classification.</li>
+</ol>
+
+<pre><code>* Sort in Descending order of pc_Constant_GDP2022
+gsort IncomeGroup -pc_Constant_GDP2022</code></pre>
+<ol start="3" type="1">
+<li>List the top 5 countries for each WB Income Group.</li>
+</ol>
+
+<pre><code>* List top 5 countries within each income group using qualifiers
+list CountryName pc_Constant_GDP2022 in 1/5 if IncomeGroup==&quot;High income&quot;</code></pre>
+<h3 id="generate-by-sort">🧩 generate; by, sort</h3>
+<p>If you want to list the top 5 countries in pcGDP terms, one can think
+of using the following.</p>
+<pre><code>* using `by` with `in` qualifier
+by IncomeGroup: list CountryName pc_Constant_GDP2022 in 1/5
+
+&#39;in&#39; may not be combined with &#39;by&#39;
+r(190);</code></pre>
+<p>The method will not work! Because by and in can’t be combined.
+Alternative approach will be to create a rank variable within each
+Income group and then list the top 5, i.e., if rank is &lt;=5.</p>
+
+<pre><code>* Generate &#39;ranking&#39; of countries within each income group using qualifiers
+by IncomeGroup, sort: generate rank = _n</code></pre>
+
+<pre><code>*List top 5 countries within each income group
+by IncomeGroup: list CountryName pc_Constant_GDP2022 rank if rank&lt;=5</code></pre>
+<h3 id="drop-observations">🧩 drop [observations]</h3>
+<p>List the countries which do not have any IncomeGroup
+classification.</p>
+
+<pre><code>*List top 5 countries without income group classification
+list CountryName if IncomeGroup == &quot;&quot;</code></pre>
 <p><a href="https://non-singularity.github.io/EDA-Lab.html" class="back-button">
 <img src="/images/Undo-PNG-Picture1.png" alt="Back" width="40"> </a></p>
 <p align="right">
