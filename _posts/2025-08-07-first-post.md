@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Role of Emptyness in Mental Wellbeing in Indiafeature-img: "/images/EDA.jpg"
+title: Role of Emptyness in Mental Wellbeing in India
+feature-img: "/images/EDA.jpg"
 tags:
   - test
   - type
