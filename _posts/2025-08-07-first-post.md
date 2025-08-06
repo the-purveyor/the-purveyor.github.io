@@ -3,7 +3,7 @@ layout: post
 title: Post1u
 feature-img: "/images/EDA.jpg"
 tags:
-  - testd
+  - test
   - type
 ---
 
