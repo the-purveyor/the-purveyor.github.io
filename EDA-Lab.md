@@ -6,11 +6,19 @@ order: 2
 
 -----------------------------
 
-## 📘 Detailed Week-wise Course Plan
+## 📘 [2025]
 
 ----------------------------- 
 
 ✅ [August](https://non-singularity.github.io/2025/08/07/august.html)
+
+-----------------------------
+
+✅ [September](https://non-singularity.github.io/2025/08/09/september.html)
+
+-----------------------------
+
+🔰
 -	
 -	
 -	
