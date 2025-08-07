@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ToC |
+title: Blog |
 order: 2
 ---
 
