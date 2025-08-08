@@ -4,7 +4,7 @@ title: Role of Conscientiousness in Economic Propsperity
 order: 2
 ---
 
-<img src="/images/Conscientiousness.png" style="display:block; margin:auto;" width="600" />
+<img src="/images/Conscientiousness.png" style="display:block; margin:auto;" width="900" />
 &copy; FT
 
 ## Introduction
