@@ -5,6 +5,7 @@ order: 2
 ---
 
 <img src="/images/Conscientiousness.png" style="display:block; margin:auto;" width="600" />
+&copy; FT
 
 ## Introduction
 
